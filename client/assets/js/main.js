@@ -33,7 +33,10 @@ function operatorButtonHandler(event){
 console.log(calculationArray);
 }
 function equalsButtonHandler(event){
-  console.log(event);
+  calculationArray.push(stringNumberToPush);
+  stringNumberToPush = "";
+  displayArray = [];
+  console.log(calculationArray);
 }
 
 function applyClickHandlers(){
