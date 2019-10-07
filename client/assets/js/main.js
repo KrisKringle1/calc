@@ -13,16 +13,21 @@ function initializeApp(){
 function numberButtonHandler(event){
   var inputtedNumber = "";
   inputtedNumber = $(event.currentTarget);
-  inputtedNumber = inputtedNumber.find("p").text()
+  inputtedNumber = inputtedNumber.find("p").text();
   stringNumberToPush = stringNumberToPush.concat(inputtedNumber);
   displayArray.push(inputtedNumber);
   updateDisplay();
-  console.log(displayArray);
+  // console.log(displayArray);
 
 
 }
 function operatorButtonHandler(event){
-  console.log(event);
+  var inputtedOperator = "";
+  inputtedOperator = $(event.currentTarget);
+  inputtedOperator = inputtedOperator.find("p").text();
+  displayArray.push(inputtedOperator);
+  updateDisplay();
+
 }
 function equalsButtonHandler(event){
   console.log(event);
