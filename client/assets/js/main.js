@@ -16,8 +16,8 @@ function numberButtonHandler(event){
   inputtedNumber = inputtedNumber.find("p").text();
   stringNumberToPush = stringNumberToPush.concat(inputtedNumber);
   displayArray.push(inputtedNumber);
+
   updateDisplay();
-  // console.log(displayArray);
 
 
 }
@@ -26,8 +26,11 @@ function operatorButtonHandler(event){
   inputtedOperator = $(event.currentTarget);
   inputtedOperator = inputtedOperator.find("p").text();
   displayArray.push(inputtedOperator);
+  calculationArray.push(stringNumberToPush);
+  calculationArray.push(inputtedOperator);
+  stringNumberToPush = "";
   updateDisplay();
-
+console.log(calculationArray);
 }
 function equalsButtonHandler(event){
   console.log(event);
