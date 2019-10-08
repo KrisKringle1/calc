@@ -47,6 +47,7 @@ function applyClickHandlers(){
   $('#number-block > .number').on("click", numberButtonHandler);
   $('#operator-column > .operator').on("click", operatorButtonHandler);
   $('#equals').on("click", equalsButtonHandler);
+  $('#ac-button').on("click", allClear);
 }
 
 function updateDisplay(){
@@ -72,10 +73,18 @@ function calculate(num1, num2, operator){
     case '*':
       result = number1 * number2;
       break;
-    default:
-      result = 'not recognized';
+    // default:
+    //   result = 'not recognized';
 
   }
   return result;
 
+}
+
+function allClear(){
+
+
+  displayArray = [];
+  calculationArray = [];
+  updateDisplay();
 }
