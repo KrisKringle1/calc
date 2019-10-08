@@ -36,7 +36,10 @@ function equalsButtonHandler(event){
   calculationArray.push(stringNumberToPush);
   stringNumberToPush = "";
   displayArray = [];
-  console.log(calculationArray);
+
+  var answer = calculate(calculationArray[0], calculationArray[2], calculationArray[1]);
+
+  console.log(answer);
 }
 
 function applyClickHandlers(){
