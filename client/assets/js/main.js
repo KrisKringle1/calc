@@ -9,6 +9,7 @@ function initializeApp() {
 	applyClickHandlers();
 }
 
+//this function takes the inputted number and displays in in the display area and updates the display
 function numberButtonHandler(event) {
 	var inputtedNumber = "";
 	inputtedNumber = $(event.currentTarget);
@@ -17,7 +18,7 @@ function numberButtonHandler(event) {
 	displayArray.push(inputtedNumber);
 	updateDisplay();
 }
-
+//this function is what allows you to add a decimal to the equation and updates hte display
 function decimalHandler(event) {
 	var inputtedDecimal = "";
 	inputtedDecimal = $(event.currentTarget);
@@ -27,16 +28,12 @@ function decimalHandler(event) {
 
 	updateDisplay();
 }
-
+//this function allows you to enter the operator button in the display array and also has functionality that allows youto enter multiple operators withotu an error
 function operatorButtonHandler(event) {
 	var inputtedOperator = "";
 	inputtedOperator = $(event.currentTarget);
 	inputtedOperator = inputtedOperator.find("p").text();
-	// displayArray.push(inputtedOperator);
-	// calculationArray.push(stringNumberToPush);
-	// calculationArray.push(inputtedOperator);
-	// stringNumberToPush = "";
-	// updateDisplay();
+	//this is where last input is declared and last op is used
 	var lastInput = "";
 	lastInput = displayArray[displayArray.length - 1];
 	if (isAnOp(lastInput)) {
@@ -52,7 +49,7 @@ function operatorButtonHandler(event) {
 		updateDisplay();
 	}
 }
-
+//this function allows you to use the equals button, calculates math when you push it, and updates the display with the result
 function equalsButtonHandler(event) {
 	calculationArray.push(stringNumberToPush);
 	stringNumberToPush = "";
@@ -61,7 +58,7 @@ function equalsButtonHandler(event) {
 	displayArray.push(answer);
 	updateDisplay();
 }
-
+//this is the function taht applies click handlers to all of the inputs
 function applyClickHandlers() {
 	$("#number-block > .number").on("click", numberButtonHandler);
 	$("#operator-column > .operator").on("click", operatorButtonHandler);
@@ -69,17 +66,17 @@ function applyClickHandlers() {
 	$("#ac-button").on("click", allClear);
 	$("#decimal").on("click", decimalHandler);
 }
-
+//this function displays teh numbers in the display area
 function updateDisplay() {
 	var displayText = displayArray.join("");
 	$("#display-text").text(displayText);
 }
-
+//this function does math depending on the operator
 function calculate(num1, num2, operator) {
 	var number1 = parseFloat(num1);
 	var number2 = parseFloat(num2);
 	var result = null;
-
+	//switch statement for operators
 	switch (operator) {
 		case "+":
 			result = number1 + number2;
@@ -96,13 +93,13 @@ function calculate(num1, num2, operator) {
 	}
 	return result;
 }
-
+//this function clears the display aray and updates it
 function allClear() {
 	displayArray = [];
 	calculationArray = [];
 	updateDisplay();
 }
-
+//this function is what allows you to enter 2+2+2 to equal 6
 function multipleOperators() {
 	var number1 = calculationArray[0];
 	var operator = calculationArray[1];
@@ -116,6 +113,8 @@ function multipleOperators() {
 	}
 	return answer;
 }
+
+//this is a function that checks if  the last inputted item is an operator
 
 function isAnOp(lastInput) {
 	if (
