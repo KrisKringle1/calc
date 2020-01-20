@@ -4,6 +4,7 @@ body {
 }
 body * {
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .calculator-body {
@@ -13,7 +14,7 @@ body * {
     transform: translate(-50%, -50%);
     height: 70%;
     width: 30%;
-    background-color: lavender;
+    background-color: black;
 }
 .display-text {
     text-align: right;
@@ -37,7 +38,7 @@ body * {
     left: 7.5%;
     height: 15%;
     width: 85%;
-    background-color: chartreuse;
+    background-color: orange;
 }
 .c-button, .ac-button {
     position: relative;
@@ -47,7 +48,7 @@ body * {
     height: 75%;
     width: 45%;
     display: inline-block;
-    background-color: rebeccapurple;
+    background-color: darkgrey;
     margin: 0px;
 }
 
@@ -56,7 +57,7 @@ body * {
     position: relative;
     height: 60%;
     width: 60%;
-    background-color: chartreuse;
+    background-color: black;
     top: 28px;
     left: 7.5%;
     margin-top: 8px;
@@ -69,14 +70,14 @@ body * {
     width: 32%;
     left: 2px;
     margin-top: 3px;
-    background-color: hotpink;
+    background-color: darkgray;
 }
 .operator-column {
     position: relative;
     display: inline-block;
     height: 60%;
     width: 24%;
-    background-color: chartreuse;
+    background-color: black;
     top: 36px;
     left: 7.5%;
 }
@@ -84,7 +85,7 @@ body * {
     position: relative;
     margin-top: 3px;
     height: 24%;
-    background-color: cornflowerblue;
+    background-color: orange;
 }
 .center {
     position: absolute;
