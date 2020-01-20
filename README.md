@@ -26,5 +26,5 @@ A basic calculator App
 
 ## Preview
 
-![alt text](https://github.com/KrisKringle1/memory-match/blob/master/hearthstone-demo.gif?raw=true "Logo Title Text 1")
+![alt text](https://github.com/KrisKringle1/calc/blob/master/calculator.png?raw=true "Logo Title Text 1")
 
